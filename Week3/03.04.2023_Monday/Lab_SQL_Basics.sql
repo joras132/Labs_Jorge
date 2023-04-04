@@ -26,7 +26,7 @@ select title from film;
 # 4. Select one column from a table and alias it. Get unique list of film languages under the alias language. Note that we are not asking you to obtain the language per each film, but this is a good time to think about how you might get that information in the future.
 
 select * from language;
-select name AS language from language;
+select name as language from language;
 
 #5.1 Find out how many stores does the company have?
 
@@ -87,7 +87,8 @@ limit 5;
 
 # Query 8 What are the unique values of k_symbol in the order table?
 
-select distinct (k_symbol) from `order`;
+select distinct (k_symbol) from `order`
+where k_symbol <> " ";
 
 # Query 9 In the order table, what are the order_ids of the client with the account_id 34?
 
