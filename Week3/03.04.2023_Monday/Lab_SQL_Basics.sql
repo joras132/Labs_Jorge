@@ -109,7 +109,7 @@ where account_to = 30067122;
 
 select trans_id, date, type, amount from trans
 where account_id = 793
-order by date 
+order by date desc
 limit 10
 
 

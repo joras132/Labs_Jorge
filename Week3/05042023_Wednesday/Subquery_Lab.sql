@@ -15,11 +15,13 @@ where film_id in ( select film_id
                     
 #3. Use subqueries to display all actors who appear in the film Alone Trip.
 
-select first_name from actor 
+select first_name 
+from actor 
 where actor_id in ( select actor_id 
 					from film_actor 
-					where film_id in (select film_id from film 
-									where title = "Alone Trip"));
+					where film_id in (select film_id 
+									  from film 
+									  where title = "Alone Trip"));
 
 # 4. Sales have been lagging among young families, and you wish to target all family movies for a promotion. Identify all movies categorized as family films.
 
@@ -40,5 +42,6 @@ where address_id in (select address_id from address
 												where country= "canada")));
 										
 									
+
 
    
